@@ -9,7 +9,7 @@ function App() {
   const [author, setAuthor] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/items')
+    axios.get('https://actuate-microlearining.onrender.com/items')
       .then(res => {
         setItems(res.data.books);
       })
@@ -18,7 +18,7 @@ function App() {
   const handleSubmit = (e)=>{
     e.preventDefault();
 
-    axios.post('http://localhost:5000/items',{name,author})
+    axios.post('https://actuate-microlearining.onrender.com/items',{name,author})
     .then((res)=>{
       setItems(res.data.books);
     })
