@@ -1,0 +1,48 @@
+.main-container{
+  max-width:800px;
+  margin:auto;
+  padding:20px;
+}
+
+.form{
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-bottom:10px;
+}
+
+input{
+  width:100%;
+  margin-bottom:15px;
+  padding:8px;
+  box-sizing: border-box;
+}
+
+button{
+  background-color: #d93146;
+  color: white;
+  padding:10px 15px;
+  border: none;
+}
+
+h2{
+  margin-bottom:10px;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:8px;
+  text-align: left;
+}
+
+th{
+  background-color: #d93146;
+  color: white;
+}
