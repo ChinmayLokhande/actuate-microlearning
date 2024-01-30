@@ -26,7 +26,7 @@ var books = [
     {
         "id":3,
         "Name": "Wings of Fire",
-        "Author": "A.P.J. Abdul Kamalm"
+        "Author": "A.P.J. Abdul Kalam"
     },
 ]
 

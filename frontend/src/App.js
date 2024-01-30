@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import Logo from './logo.jpg';
 
 function App() {
 
@@ -15,25 +16,30 @@ function App() {
       })
   })
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('https://actuate-microlearining.onrender.com/items',{name,author})
-    .then((res)=>{
-      setItems(res.data.books);
-    })
+    axios.post('https://actuate-microlearining.onrender.com/items', { name, author })
+      .then((res) => {
+        setItems(res.data.books);
+      })
   }
 
   return (
     <div className="main-container">
+      
+      <nav>
+        <h2><img src={Logo} alt="ActuateMicrolearning" /> Bookstore</h2>
+      </nav>
+      <div className="content-wrapper">
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" name="name" onChange={e=>setName(e.target.value)} />
+          <input type="text" name="name" onChange={e => setName(e.target.value)} required />
         </label>
         <label>
           Author:
-          <input type="text" name="author" onChange={e=>setAuthor(e.target.value)} />
+          <input type="text" name="author" onChange={e => setAuthor(e.target.value)} required />
         </label>
         <button type="submit">Submit</button>
       </form>
@@ -56,6 +62,8 @@ function App() {
         </tbody>
       </table>
 
+      </div>
+      
     </div>
   );
 }
